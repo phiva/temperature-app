@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: temperature-app
+  labels:
+    app: temperature-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: temperature-app
+  template:
+    metadata:
+      labels:
+        app: temperature-app
+    spec:
+      containers:
+      - name: temperature-app
+        image: phiva1985/temperature-app
+        ports:
+        - containerPort: 5000
