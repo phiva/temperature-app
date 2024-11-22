@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: temperature-app
-        image: phiva1985/temperature-app
+        image: phiva1985/temperature-app:v1
         ports:
         - containerPort: 5000
